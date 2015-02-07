@@ -90,7 +90,7 @@ fn main() {
                 .arg("-c")
                 .arg(format!("{} {}", src.join("curl/configure").display(),
                              config_opts.connect(" "))
-                            .replace("C:\\", "/c/")
+                            .replace("C:\\", "/cygdrive/c/")
                             .replace("\\", "/")));
     run(Command::new(make())
                 .arg(format!("-j{}", os::getenv("NUM_JOBS").unwrap()))
